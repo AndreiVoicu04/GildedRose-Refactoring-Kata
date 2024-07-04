@@ -59,8 +59,8 @@ class GildedRoseTest(unittest.TestCase):
         items = [
             Item("Backstage passes to a TAFKA", 12, 5),
             Item("Backstage passes Coldplay", 10, 5),
-            Item("Backstage passes Ed Sheeran", 5, 5),
-            Item("Backstage passes mama mea", 0, 5)
+            Item("Backstage passes Guns n Roses", 5, 5),
+            Item("Backstage passes Metallica", 0, 5)
         ]
         glided_rose = GildedRose(items)
         glided_rose.update_quality()

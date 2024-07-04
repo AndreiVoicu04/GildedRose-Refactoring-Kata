@@ -48,10 +48,8 @@ class GildedRose(object):
 
             item.quality = item.quality + item_quality_difference
 
-            if item.quality < 0:
-                item.quality = 0
-            elif item.quality > 50:
-                item.quality = 50
+            item.quality = min(item.quality, 50)
+            item.quality = max(item.quality, 0)
 
 
 class Item:
