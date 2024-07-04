@@ -9,10 +9,10 @@ class GildedRose(object):
         return "Sulfuras" in item.name
 
     def is_conjured(self, item):
-        return "Conjured" in item.name
+        return item.name.find("Conjured") == 0
 
     def is_backstage_passes(self, item):
-        return "Backstage passes" in item.name
+        return item.name.find("Backstage passes") == 0
 
     def is_aged_brie(self, item):
         return "Aged Brie" in item.name
@@ -59,6 +59,7 @@ class Item:
         self.name = name
         self.sell_in = sell_in
         self.quality = quality
+
 
     def __repr__(self):
         return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
